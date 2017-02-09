@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>ej</title>
+<head>
+
+<title>ej</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+
+<body style="font-family:Adam;color:gray;background-color:#131111">
+
+<div id="container">
+</div>
+
+<!--header-->
+
+
+<div id="container" style="position:fixed;">
+<p style="font-size:4em;text-align:center;">Elon Jefferson</p>
+</div>
+
+<!--nav-->
+<div style="height:95px;">
+<nav class="navbar navbar-default" id="nav">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+				<span class="glyphicon glyphicon-menu-hamburger" style="font-size:20px;margin-top:20px;color:gray;"></span>
+			</button>
+		<a href="file:///C:/Users/Administrator/Downloads/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/home.html" class="navbar-brand" style="font-size:3em;margin:.3em 0em .4em .2em;padding:0.6em 0.2em 0.9em 0.5em;border:1px solid gray;border-radius:100%;">ej</a>
+		</div>
+	<div class="collapse navbar-collapse" id="mainNavBar">
+		<ul class="nav navbar-nav navbar-right" style="font-size:24px;">
+			<li><a href="file:///C:/Users/Administrator/Downloads/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/funFacts.html" style="margin:.8em;">Fun Facts</a></li>
+			<li><a href="file:///C:/Users/Administrator/Downloads/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/aboutMe.html" style="margin:.8em;">About Me</a></li>
+			<li><a href="file:///C:/Users/Administrator/Downloads/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/resume.html" style="margin:.8em;">Resume</a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+</div>
+
+<!--content-->
+
+<div style="height:1000px;color:#fafafa;background-color:gray;font-size:3em;padding-top:4em;text-align:center;">
+<p>Hi, my name is Elon!<br> This website is my first project.</p>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var nav = $(".navbar");
+	var banner = $("#container");
+	var pos = nav.position();
+
+	$(window).scroll(function(){
+		var windowPos = $(window).scrollTop();
+
+		if(windowPos>=banner.outerHeight()){
+			nav.removeClass("navbar-default").addClass("navbar-fixed-top").addClass("navbar-2")
+		}
+
+		else{
+			nav.removeClass("navbar-fixed-top").removeClass("navbar-2").addClass("navbar-default")
+		}
+	});
+});
+
+</script>
+
+</html>
